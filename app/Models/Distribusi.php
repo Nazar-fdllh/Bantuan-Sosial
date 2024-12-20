@@ -13,6 +13,10 @@ class Distribusi extends Model
 
     // Kolom yang bisa diisi melalui mass assignment
     protected $fillable = ['penerima_id', 'program_bantuan_id', 'tanggal_distribusi', 'status'];
+    
+    protected $casts = [
+        'tanggal_distribusi' => 'date', // atau gunakan 'datetime' jika ingin menyertakan waktu
+    ];
 
     // Relasi ke model Penerima
     public function penerima()
