@@ -17,7 +17,6 @@ return new class extends Migration
             $table->foreignId('program_bantuan_id')->constrained('program_bantuan')->onDelete('cascade'); // Relasi ke Program Bantuan
             $table->date('tanggal_distribusi'); // Tanggal distribusi bantuan
             $table->enum('status', ['Diterima', 'Ditolak', 'Ditunda'])->default('Diterima');
- // Status distribusi (Diterima, Ditunda, Ditolak)
             $table->timestamps(); // Created at & Updated at
         });
         
