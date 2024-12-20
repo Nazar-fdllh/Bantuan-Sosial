@@ -33,9 +33,14 @@ class DistribusiResource extends Resource
             Forms\Components\DatePicker::make('tanggal_distribusi')
                 ->label('Tanggal Distribusi')
                 ->required(),
-            Forms\Components\TextInput::make('status')
+            Forms\Components\Select::make('status')
                 ->label('Status')
-                ->default('Diterima')
+                ->options([
+                    'Diterima' => 'Diterima',
+                    'Ditolak' => 'Ditolak',
+                    'Ditunda' => 'Ditunda',
+                ])
+                ->default('')
                 ->required(),
         ]);
     }
