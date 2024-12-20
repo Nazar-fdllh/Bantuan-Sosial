@@ -62,17 +62,16 @@ class DistribusiResource extends Resource
             ->filters([
                 Tables\Filters\Filter::make('status')
                     ->label('Status Distribusi')
-                    ->query(fn ($query, $data) => $query->where('status', $data))
+                    ->query(fn ($query, $data) => $query->where('status', $data)->orWhere('status', 'Diterima'))
                     ->form([
                         Forms\Components\Select::make('status')
                             ->label('Status')
                             ->options([
-                                'Diterima' => 'Diterima',
                                 'Ditunda' => 'Ditunda',
                                 'Ditolak' => 'Ditolak',
                             ]),
                     ]),
-            ])
+            ])            
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
