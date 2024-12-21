@@ -10,10 +10,6 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <img src="{{asset('assets/images/logo.png')}}" alt="" />
-            <head>
-              <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-          </head>
-          
             <span>
               Sistem Informasi Bantuan Sosial
             </span>
@@ -622,6 +618,7 @@
   <!-- footer section -->
 
   <!-- resources/views/welcome.blade.php -->
+  <head><link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"></head>
   <script type="text/javascript" src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('assets/js/bootstrap.js') }}"></script>
 
