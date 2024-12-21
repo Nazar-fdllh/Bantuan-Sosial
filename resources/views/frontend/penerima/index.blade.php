@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Daftar Penerima')
+@section('title', 'Sistem Informasi Bantuan Sosial')
 
 @section('content')
 <div class="hero_area">
@@ -557,10 +557,7 @@
     <div class="container ">
       <div class="heading_container ">
         <h2 class="">
-          Request
-          <span>
-            A call Back
-          </span>
+          Tambah Penerima Untuk Request Bantuan
 
         </h2>
       </div>
