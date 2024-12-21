@@ -5,14 +5,11 @@ use App\Models\Penerima;
 use App\Http\Controllers\PenerimaController;
 use App\Http\Controllers\DistribusiController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/distribusi', [DistribusiController::class, 'index'])->name('distribusi.index');
 
 
-Route::get('/penerima', function () {
+Route::get('/', function () {
     return view('frontend.penerima.index');
 
 });
