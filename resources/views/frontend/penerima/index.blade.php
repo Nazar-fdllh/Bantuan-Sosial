@@ -23,13 +23,13 @@
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">
-                    Home <span class="sr-only">(current)</span></a>
+                    Home <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> About </a>
+                  <a class="nav-link" href="{{ url('/about') }}"> About </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="program.html"> Programs </a>
+                  <a class="nav-link" href="{{ url('/distribusi') }}"> Distribusi </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html"> Contact us</a>
@@ -65,11 +65,11 @@
 
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1">
+                    <a href="#" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});" class="btn-1">
                         Tambah Penerima
                       </a>
-                      <a href="" class="btn-2">
-                        Lihat Distribusi
+                      <a href="{{ route('frontend.distribusi.index') }}" class="btn-2">
+                          Lihat Distribusi
                       </a>
                     </div>
                   </div>
@@ -87,96 +87,15 @@
                       </span>
                     </h1>
                     <p>
-                      Bantuan sosial hadir dalam berbagai bentuk untuk memenuhi kebutuhan masyarakat. Jenis-jenis bantuan sosial meliputi bantuan pangan, kesehatan, pendidikan, ekonomi, dan lainnya. Setiap jenis bantuan dirancang untuk mendukung kesejahteraan dan kemajuan masyarakat.
-
+                      Bantuan sosial hadir dalam berbagai bentuk untuk 
+                      memenuhi kebutuhan masyarakat. Jenis-jenis bantuan sosial 
+                      meliputi bantuan pangan, kesehatan, pendidikan, ekonomi, dan lainnya. 
+                      Setiap jenis bantuan dirancang untuk mendukung kesejahteraan dan kemajuan 
+                      masyarakat.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn-1">
+                    <a href="#offer-section" class="btn-1">
                         Program Bantuan
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      A Perfect Learning Center <br />
-                      <span>
-                        For Your Kids
-                      </span>
-                    </h1>
-                    <p>
-                      It is a long established fact that a reader will be distracted
-                      by the readable content of a page when looking at its layout.
-                      The point of using Lorem Ipsum is that it has a more-or-less
-                      normal distribution of letters, as
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <a href="" class="btn-2">
-                        Contact us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      A Perfect Learning Center <br />
-                      <span>
-                        For Your Kids
-                      </span>
-                    </h1>
-                    <p>
-                      It is a long established fact that a reader will be distracted
-                      by the readable content of a page when looking at its layout.
-                      The point of using Lorem Ipsum is that it has a more-or-less
-                      normal distribution of letters, as
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <a href="" class="btn-2">
-                        Contact us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="detail-box">
-                    <h1>
-                      A Perfect Learning Center <br />
-                      <span>
-                        For Your Kids
-                      </span>
-                    </h1>
-                    <p>
-                      It is a long established fact that a reader will be distracted
-                      by the readable content of a page when looking at its layout.
-                      The point of using Lorem Ipsum is that it has a more-or-less
-                      normal distribution of letters, as
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn-1">
-                        Read More
-                      </a>
-                      <a href="" class="btn-2">
-                        Contact us
                       </a>
                     </div>
                   </div>
@@ -193,7 +112,7 @@
 
   <!-- offer section -->
 
-  <section class="offer_section hero_next_section-margin layout_padding">
+  <section id="offer-section" class="offer_section hero_next_section-margin layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -554,37 +473,55 @@
   <!-- contact section -->
 
   <section class="contact_section layout_padding">
-    <div class="container ">
-      <div class="heading_container ">
-        <h2 class="">
-          Tambah Penerima Untuk Request Bantuan
-
-        </h2>
-      </div>
+    <div class="container">
+        <div class="heading_container">
+            <h2>Tambah Penerima Untuk Request Bantuan</h2>
+        </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 ">
-          <form action="#">
-            <div>
-              <input type="text" placeholder="Name" />
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="{{ route('penerima.store') }}" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <input type="text" name="nama" placeholder="Nama" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="nik" placeholder="NIK" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="alamat" placeholder="Alamat" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="no_hp" placeholder="Nomor HP (Opsional)" class="form-control">
+                    </div>
+                    <div class="d-flex mt-4 justify-content-center">
+                        <button type="submit" class="btn btn-primary">
+                            Tambah Penerima
+                        </button>
+                    </div>
+                </form>
+                @if (session('success'))
+                    <div class="alert alert-success mt-3 text-center" id="success-alert">
+                        {{ session('success') }}
+                    </div>
+                @endif
             </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" placeholder="Pone Number" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="d-flex  mt-4 ">
-              <button>
-                SEND
-              </button>
-            </div>
-          </form>
         </div>
+    </div>
+</section>
+<script>
+    // Auto-hide success alert after 5 seconds
+    document.addEventListener('DOMContentLoaded', function () {
+        const alert = document.getElementById('success-alert');
+        if (alert) {
+            setTimeout(() => {
+                alert.style.display = 'none';
+            }, 5000);
+        }
+    });
+</script>
+
         <div class="col-md-6">
           <!-- map section -->
           <div class="map_section">

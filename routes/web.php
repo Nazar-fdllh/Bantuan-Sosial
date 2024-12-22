@@ -4,15 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Penerima;
 use App\Http\Controllers\PenerimaController;
 use App\Http\Controllers\DistribusiController;
+use App\Http\Controllers\AboutController;
 
 
-Route::get('/distribusi', [DistribusiController::class, 'index'])->name('distribusi.index');
+Route::get('/distribusi', [DistribusiController::class, 'index'])->name('frontend.distribusi.index');
+Route::get('/about', [AboutController::class, 'index'])->name('frontend.about.index');
 
-
-Route::get('/', function () {
-    return view('frontend.penerima.index');
-
-});
+Route::get('/', function () {return view('frontend.penerima.index');});
 
 Route::post('/penerima/store', [PenerimaController::class, 'store'])->name('penerima.store');
 

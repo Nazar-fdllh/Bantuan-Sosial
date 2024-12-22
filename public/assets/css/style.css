@@ -223,7 +223,7 @@ a:focus {
 }
 
 .slider_section ol.carousel-indicators {
-  margin: 0;
+  margin: 5px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -231,6 +231,10 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.carousel-indicators {
+  list-style-type: none; /* Hilangkan angka bawaan */
 }
 
 .slider_section ol.carousel-indicators li {

@@ -18,6 +18,9 @@ class PenerimaController extends Controller
 
         Penerima::create($request->all());
 
+        
         return redirect()->route('frontend.penerima.index')->with('success', 'Penerima berhasil ditambahkan!');
+        
     }
+    
 }
