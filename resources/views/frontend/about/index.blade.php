@@ -54,6 +54,7 @@
                             style="max-width: 150px; height: auto;">
                     <h3>Programmer 1</h3>
                     <p><strong>Nama:</strong> M. Haikal Akbar</p>
+                    <p><strong>NIM:</strong> C030323022 </p>
                     <p><strong>Bio:</strong> Saya adalah mahasiswa semester 3 yang antusias mempelajari dan mendalami dunia pemrograman. Saat ini, saya memiliki minat besar dalam pengembangan web dan aplikasi mobile. Saya senang berkolaborasi dalam tim, mengikuti perkembangan teknologi, dan mengimplementasikan solusi kreatif untuk menyelesaikan masalah.</p>
                     <p><strong>Keahlian:</strong> Frontend Development, Web Design, User Experience </p>
                 </div>
@@ -67,6 +68,7 @@
                             style="max-width: 150px; height: auto;">
                     <h3>Programmer 2</h3>
                     <p><strong>Nama:</strong> Muhammad Nazar Fadillah </p>
+                    <p><strong>NIM:</strong> C030323104 </p>
                     <p><strong>Bio:</strong> Saya adalah mahasiswa semester 3 yang antusias mempelajari dan mendalami dunia pemrograman. Saat ini, saya memiliki minat besar dalam pengembangan web dan aplikasi mobile. Saya senang berkolaborasi dalam tim, mengikuti perkembangan teknologi, dan mengimplementasikan solusi kreatif untuk menyelesaikan masalah.</p>
                     <p><strong>Keahlian:</strong> Backend Development, API Integration, Database Management </p>
                 </div>
