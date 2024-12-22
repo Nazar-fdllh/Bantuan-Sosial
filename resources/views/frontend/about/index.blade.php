@@ -35,9 +35,6 @@
                                 Distribusi
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact us</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -52,26 +49,26 @@
             <!-- Programmer 1 -->
             <div class="col-md-6 mb-4">
                 <div class="about_box text-center">
-                    <img src="{{ asset('assets/images/download.jpg') }}" alt="Programmer 1" 
+                    <img src="{{ asset('assets/images/Gambar WhatsApp 2024-12-22 pukul 08.35.51_015f7496.jpg') }}" alt="Programmer 1" 
                             class="img-fluid rounded-circle mb-3" 
                             style="max-width: 150px; height: auto;">
                     <h3>Programmer 1</h3>
-                    <p><strong>Nama:</strong> John Doe</p>
-                    <p><strong>Bio:</strong> Seorang programmer dengan pengalaman lebih dari 6 tahun dalam pengembangan web. Memiliki keahlian di PHP, Laravel, dan JavaScript.</p>
-                    <p><strong>Keahlian:</strong> Backend Development, API Integration, Database Management</p>
+                    <p><strong>Nama:</strong> M. Haikal Akbar</p>
+                    <p><strong>Bio:</strong> Saya adalah mahasiswa semester 3 yang antusias mempelajari dan mendalami dunia pemrograman. Saat ini, saya memiliki minat besar dalam pengembangan web dan aplikasi mobile. Saya senang berkolaborasi dalam tim, mengikuti perkembangan teknologi, dan mengimplementasikan solusi kreatif untuk menyelesaikan masalah.</p>
+                    <p><strong>Keahlian:</strong> Frontend Development, Web Design, User Experience </p>
                 </div>
             </div>
 
             <!-- Programmer 2 -->
             <div class="col-md-6 mb-4">
                 <div class="about_box text-center">
-                    <img src="{{ asset('assets/images/download2.jpg') }}" alt="Programmer 2" 
+                    <img src="{{ asset('assets/images/1.jpg') }}" alt="Programmer 2" 
                             class="img-fluid rounded-circle mb-3" 
                             style="max-width: 150px; height: auto;">
                     <h3>Programmer 2</h3>
-                    <p><strong>Nama:</strong> Jane Smith</p>
-                    <p><strong>Bio:</strong> Programmer dengan fokus pada front-end development dan desain antarmuka pengguna. Terampil dalam HTML, CSS, React.js, dan UX/UI Design.</p>
-                    <p><strong>Keahlian:</strong> Frontend Development, Web Design, User Experience</p>
+                    <p><strong>Nama:</strong> Muhammad Nazar Fadillah </p>
+                    <p><strong>Bio:</strong> Saya adalah mahasiswa semester 3 yang antusias mempelajari dan mendalami dunia pemrograman. Saat ini, saya memiliki minat besar dalam pengembangan web dan aplikasi mobile. Saya senang berkolaborasi dalam tim, mengikuti perkembangan teknologi, dan mengimplementasikan solusi kreatif untuk menyelesaikan masalah.</p>
+                    <p><strong>Keahlian:</strong> Backend Development, API Integration, Database Management </p>
                 </div>
             </div>
         </div>

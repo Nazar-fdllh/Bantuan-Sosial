@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'About')
+@section('title', 'Daftar Distribusi Bantuan')
 
 @section('content')
 
@@ -35,9 +35,6 @@
                                 Distribusi <span class="sr-only"></span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html"> Contact us</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +47,7 @@
     <table class="table table-hover table-bordered table-striped align-middle">
         <thead class="table-dark text-center">
             <tr>
-                <th>#</th>
+                <th>No</th>
                 <th>Nama Penerima</th>
                 <th>Program Bantuan</th>
                 <th>Tanggal Distribusi</th>
