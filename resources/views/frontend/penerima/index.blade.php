@@ -22,7 +22,7 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">
+                  <a class="nav-link" href="{{ url('/') }}">
                     Home <span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
@@ -116,7 +116,7 @@
           Program Bantuan
         </h2>
         <p>
-          ujuan dari halaman ini adalah untuk memberikan informasi yang jelas dan mudah dipahami mengenai berbagai program bantuan 
+          Tujuan dari halaman ini adalah untuk memberikan informasi yang jelas dan mudah dipahami mengenai berbagai program bantuan 
           yang dapat diakses oleh masyarakat. Dengan informasi yang terstruktur dengan baik, pengunjung dapat dengan mudah menemukan 
           rincian mengenai syarat, cara pendaftaran, serta manfaat yang bisa didapatkan dari setiap program bantuan.
         </p>
@@ -144,9 +144,9 @@
           <div class="content-box">
             <div class="img-box" style="width: 100%; max-width: 600px; overflow: hidden;">
               <img src="{{ asset('assets/images/blt.jpg') }}" 
-                   alt="" 
-                   class="img-fluid mb-3" 
-                   style="width: auto; height: auto;">
+                    alt="" 
+                    class="img-fluid mb-3" 
+                    style="width: auto; height: auto;">
           </div>
           
             <div class="detail-box">
@@ -252,7 +252,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form action="{{ route('penerima.store') }}" method="POST">
+                <form action="{{ route('penerima.store') }}" method="POST" id="form-tambah-penerima">
                     @csrf
                     <div class="mb-3">
                         <input type="text" name="nama" placeholder="Nama" class="form-control" required>
@@ -273,14 +273,22 @@
                     </div>
                 </form>
                 @if (session('success'))
-                    <div class="alert alert-success mt-3 text-center" id="success-alert">
-                        {{ session('success') }}
-                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Berhasil!',
+                                text: '{{ session('success') }}',
+                                confirmButtonText: 'OK'
+                            });
+                        });
+                    </script>
                 @endif
             </div>
         </div>
     </div>
 </section>
+
 <script>
     // Auto-hide success alert after 5 seconds
     document.addEventListener('DOMContentLoaded', function () {
@@ -326,6 +334,7 @@
   <head><link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"></head>
   <script type="text/javascript" src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
   <script type="text/javascript" src="{{ asset('assets/js/bootstrap.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
   <!-- google map js -->
