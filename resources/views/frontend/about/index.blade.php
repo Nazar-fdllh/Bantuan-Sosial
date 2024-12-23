@@ -64,7 +64,7 @@
                                     <span>No Image</span>
                                 </div>
                             @endif
-                            <h3 class="text-primary">{{ $profil->nama }}</h3>
+                            <h3 class="font-weight-bold text-dark">{{ $profil->nama }}</h3>
                             <p><strong>NIM:</strong> {{ $profil->nim }}</p>
                             <p><strong>Bio:</strong> {{ $profil->bio }}</p>
                             <p><strong>Keahlian:</strong> {{ $profil->keahlian }}</p>
