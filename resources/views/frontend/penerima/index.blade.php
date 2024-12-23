@@ -127,7 +127,7 @@
             <div class="col-md-6">
                 <div class="content-box">
                     <div class="img-box">
-                        <a href="https://kemensos.go.id/">
+                        <a href="{{ url('/program') }}">
                             <img src="{{ asset('assets/images/pkh.png') }}" alt="" class="img-fluid mb-3">
                         </a>
                     </div>
@@ -142,7 +142,7 @@
             <div class="col-md-6">
                 <div class="content-box">
                     <div class="img-box" style="width: 100%; max-width: 600px; overflow: hidden;">
-                        <a href="https://kemensos.go.id/">
+                        <a href="{{ url('/program') }}">
                             <img src="{{ asset('assets/images/blt.jpg') }}" alt="" class="img-fluid mb-3" style="width: auto; height: auto;">
                         </a>
                     </div>
