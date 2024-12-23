@@ -42,14 +42,14 @@ class ProgramBantuanResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('gambar')
+                    ->label('Gambar')
+                    ->size(50), // Ukuran thumbnail
                 Tables\Columns\TextColumn::make('nama_program')
                     ->label('Nama Program')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('deskripsi')
                     ->label('Deskripsi'),
-                    Tables\Columns\ImageColumn::make('gambar')
-                    ->label('Gambar')
-                    ->size(50), // Ukuran thumbnail
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Tanggal Dibuat')
                     ->dateTime('d/m/Y'),
