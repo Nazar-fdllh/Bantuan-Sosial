@@ -71,6 +71,33 @@
     </table>
 </div>
 
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Daftar Penerima</h2>
+    <table class="table table-hover table-bordered table-striped align-middle">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>No</th>
+                <th>Nama Lengkap</th>
+                <th>NIK</th>
+                <th>Alamat</th>
+                <th>Nomor Telepon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($penerima as $item)
+                <tr>
+                    <td class="text-center">{{ $loop->iteration }}</td>
+                    <td>{{ $item->nama }}</td>
+                    <td>{{ $item->nik }}</td>
+                    <td>{{ $item->alamat }}</td>
+                    <td>{{ $item->no_hp ?? '-' }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+
+
 <head><link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"></head>
     <script type="text/javascript" src="{{ asset('assets/js/jquery-3.4.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/bootstrap.js') }}"></script>

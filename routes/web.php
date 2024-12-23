@@ -16,6 +16,7 @@ Route::get('/program', [ProgramController::class, 'index'])->name('program');
 
 Route::get('/program-bantuan', [FrontendController::class, 'index'])->name('program-bantuan');
 
+
 Route::get('/distribusi', [DistribusiController::class, 'index'])->name('frontend.distribusi.index');
 
 Route::get('/about', function () {
