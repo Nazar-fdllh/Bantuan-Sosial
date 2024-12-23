@@ -8,7 +8,7 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{asset('assets/images/logo.png')}}" alt="" />
             <span>
               Sistem Informasi Bantuan Sosial
@@ -124,11 +124,15 @@
       <div class="row">
         <div class="col-md-6">
           <div class="content-box">
-            <div class="img-box">
-              <img src="{{ asset('assets/images/pkh.png') }}" alt=""
-              class="img-fluid mb-3" 
-              style="max-width: auto; height: auto;">
-            </div>
+          <div class="img-box" style="width: 100%; max-width: 600px; overflow: hidden;">
+        <a href="https://kemensos.go.id/">
+          <img src="{{ asset('assets/images/pkh.png') }}" 
+                alt="" 
+                class="img-fluid mb-3" 
+                style="width: auto; height: auto;">
+        </a>
+      </div>
+
             <div class="detail-box">
               
               <h6>
@@ -143,10 +147,12 @@
         <div class="col-md-6">
           <div class="content-box">
             <div class="img-box" style="width: 100%; max-width: 600px; overflow: hidden;">
+              <a href="https://kemensos.go.id/">
               <img src="{{ asset('assets/images/blt.jpg') }}" 
                     alt="" 
                     class="img-fluid mb-3" 
                     style="width: auto; height: auto;">
+                    </a>
           </div>
           
             <div class="detail-box">
@@ -162,9 +168,11 @@
         <div class="col-md-6">
           <div class="content-box">
             <div class="img-box">
+              <a href="https://kemensos.go.id/">
               <img src="{{ asset('assets/images/sembako-removebg-preview.png') }}" alt=""
               class="img-fluid mb-3" 
               style="max-width: auto; height: auto;">
+              </a>
             </div>
             <div class="detail-box">
               <h6>
@@ -179,9 +187,11 @@
         <div class="col-md-6">
           <div class="content-box">
             <div class="img-box">
+              <a href="https://kemensos.go.id/">
               <img src="{{ asset('assets/images/bangtuan sekolah.jpg') }}" alt=""
               class="img-fluid mb-3" 
               style="max-width: auto; height: auto;">
+              </a>
             </div>
             <div class="detail-box">
               <h6>
@@ -196,9 +206,11 @@
         <div class="col-md-6">
           <div class="content-box">
             <div class="img-box">
+              <a href="https://kemensos.go.id/">
               <img src="{{ asset('assets/images/5.jpg') }}" alt=""
               class="img-fluid mb-3" 
               style="max-width: auto; height: auto;">
+              </a>
             </div>
             <div class="detail-box">
               <h6>
@@ -213,9 +225,11 @@
         <div class="col-md-6">
           <div class="content-box">
             <div class="img-box">
+              <a href="https://kemensos.go.id/">
               <img src="{{ asset('assets/images/rumah.jpg') }}" alt=""
               class="img-fluid mb-3" 
               style="max-width: auto; height: auto;">
+              </a>
               </div>
             <div class="detail-box">
               <h6>
