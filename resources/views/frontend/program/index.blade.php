@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Biografi Programmer')
+@section('title', 'List Program')
 
 @section('content')
 <header class="header_section">
@@ -25,9 +25,9 @@
                                 Home
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ url('/about') }}">
-                                About <span class="sr-only"></span>
+                                About
                             </a>
                         </li>
                         <li class="nav-item">
@@ -35,8 +35,10 @@
                                 Distribusi
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/program') }}"> Program</a>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url('/program') }}">
+                                Program <span class="sr-only"></span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -45,39 +47,37 @@
     </div>
 </header>
 
-<!-- About Section Start -->
-<section class="about_section py-5">
-        <div class="container">
-            <h1 class="text-center mb-5">About Us</h1>
-            <div class="row">
-                @forelse ($profils as $profil)
-                    <div class="col-md-6 mb-4">
-                        <div class="about_box text-center shadow p-4 rounded bg-light">
-                            @if ($profil->gambar)
-                                <img src="{{ asset('storage/' . $profil->gambar) }}" 
-                                     alt="{{ $profil->nama }}" 
-                                     class="img-fluid rounded-circle mb-3" 
-                                     style="max-width: 150px; height: 150px; object-fit: cover;">
-                            @else
-                                <div class="img-placeholder rounded-circle mb-3" 
-                                     style="width: 150px; height: 150px; background-color: #ddd; display: flex; align-items: center; justify-content: center;">
-                                    <span>No Image</span>
-                                </div>
-                            @endif
-                            <h3 class="text-primary">{{ $profil->nama }}</h3>
-                            <p><strong>NIM:</strong> {{ $profil->nim }}</p>
-                            <p><strong>Bio:</strong> {{ $profil->bio }}</p>
-                            <p><strong>Keahlian:</strong> {{ $profil->keahlian }}</p>
+<!-- Program Bantuan Section Start -->
+<section id="offer-section" class="offer_section hero_next_section-margin layout_padding" style="margin-top: 0;">
+    <div class="container">
+        <div class="heading_container">
+            <h2>Program Bantuan</h2>
+            <p>
+                Tujuan dari halaman ini adalah untuk memberikan informasi yang jelas dan mudah dipahami mengenai berbagai program bantuan 
+                yang dapat diakses oleh masyarakat. Dengan informasi yang terstruktur dengan baik, pengunjung dapat dengan mudah menemukan 
+                rincian mengenai syarat, cara pendaftaran, serta manfaat yang bisa didapatkan dari setiap program bantuan.
+            </p>
+        </div>
+        <div class="row">
+            @foreach ($program_bantuan as $program)
+                <div class="col-md-6">
+                    <div class="content-box">
+                        <div class="img-box">
+                            <a href="{{ $program->link ?? 'https://kemensos.go.id/' }}">
+                                <img src="{{ asset('storage/' . $program->gambar) }}" alt="{{ $program->nama_program }}" class="img-fluid mb-3">
+                            </a>
+                        </div>
+                        <div class="detail-box">
+                            <h6>{{ $program->nama_program }}</h6>
+                            <p>{{ $program->deskripsi }}</p>
                         </div>
                     </div>
-                @empty
-                    <p class="text-center">Belum ada data profil.</p>
-                @endforelse
-            </div>
+                </div>
+            @endforeach
         </div>
-    </section>
-
-<!-- About Section End -->
+    </div>
+</section>
+<!-- Program Bantuan Section End -->
 
 <head>
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">

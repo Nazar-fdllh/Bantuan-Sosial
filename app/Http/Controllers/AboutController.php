@@ -1,19 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use App\Models\Profil; // Pastikan namespace ini ada
 
 class AboutController extends Controller
 {
-    /**
-     * Tampilkan halaman About.
-     *
-     * @return \Illuminate\View\View
-     */
     public function index()
     {
-        // Kirim data untuk halaman About (bisa ditambah dengan informasi programmer)
-        return view('frontend.about.index');
+        $profils = Profil::all(); // Mengambil semua data dari tabel 'profils'
+        return view('about', compact('profils'));
     }
 }

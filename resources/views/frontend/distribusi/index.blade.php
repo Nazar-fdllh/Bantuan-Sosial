@@ -35,6 +35,9 @@
                                 Distribusi <span class="sr-only"></span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('/program') }}"> Program</a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -30,6 +30,11 @@ class ProgramBantuanResource extends Resource
             Forms\Components\TextInput::make('deskripsi')
                 ->label('Deskripsi')
                 ->maxLength(255),
+            Forms\Components\FileUpload::make('gambar')
+            ->label('Gambar')
+            ->directory('program-bantuan') // Folder penyimpanan
+            ->image() // Hanya menerima file gambar
+            ->required(),
         ]);
     }
 
@@ -42,6 +47,9 @@ class ProgramBantuanResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('deskripsi')
                     ->label('Deskripsi'),
+                    Tables\Columns\ImageColumn::make('gambar')
+                    ->label('Gambar')
+                    ->size(50), // Ukuran thumbnail
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Tanggal Dibuat')
                     ->dateTime('d/m/Y'),
