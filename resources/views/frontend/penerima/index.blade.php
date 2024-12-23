@@ -117,9 +117,9 @@
         <div class="heading_container">
             <h2>Program Bantuan</h2>
             <p>
-            Tujuan dari halaman ini adalah untuk memberikan informasi yang jelas dan mudah dipahami mengenai berbagai program bantuan 
-          yang dapat diakses oleh masyarakat. Dengan informasi yang terstruktur dengan baik, pengunjung dapat dengan mudah menemukan 
-          rincian mengenai syarat, cara pendaftaran, serta manfaat yang bisa didapatkan dari setiap program bantuan.
+                Tujuan dari halaman ini adalah untuk memberikan informasi yang jelas dan mudah dipahami mengenai berbagai program bantuan 
+                yang dapat diakses oleh masyarakat. Dengan informasi yang terstruktur dengan baik, pengunjung dapat dengan mudah menemukan 
+                rincian mengenai syarat, cara pendaftaran, serta manfaat yang bisa didapatkan dari setiap program bantuan.
             </p>
         </div>
         <div class="row">
@@ -152,14 +152,15 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Program 3 (optional, add more as needed) -->
-            
-                </div>
-            </div>
+        <!-- Tombol Lihat Semua -->
+        <div class="text-center mt-4">
+            <a href="{{ url('/program') }}" class="btn btn-primary" style="padding: 10px 20px; font-size: 16px;">Lihat Semua</a>
         </div>
     </div>
 </section>
+
 
 
 
