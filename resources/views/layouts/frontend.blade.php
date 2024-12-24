@@ -24,4 +24,10 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<section class="container-fluid footer_section">
+  <p>
+    &copy; 2024 All Rights Reserved
+    <a href="https://html.design/"> UAS DESAIN WEB 2024</a>
+  </p>
+</section>
 </html>

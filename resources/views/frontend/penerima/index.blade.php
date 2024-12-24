@@ -229,12 +229,7 @@
   </div>
 </section>
 
-<section class="container-fluid footer_section">
-  <p>
-    &copy; 2024 All Rights Reserved
-    <a href="https://html.design/"> UAS DESAIN WEB 2024</a>
-  </p>
-</section>
+
 @endsection
 <script>
   // Auto-hide success alert after 5 seconds
