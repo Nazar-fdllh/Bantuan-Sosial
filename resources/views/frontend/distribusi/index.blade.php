@@ -81,6 +81,7 @@
                 <th>NIK</th>
                 <th>Alamat</th>
                 <th>Nomor Telepon</th>
+                <th>Program yang dipilih</th>
             </tr>
         </thead>
         <tbody>
@@ -91,6 +92,7 @@
                     <td>{{ $item->nik }}</td>
                     <td>{{ $item->alamat }}</td>
                     <td>{{ $item->no_hp ?? '-' }}</td>
+                    <td>{{ $item->deskripsi }}</td>
                 </tr>
             @endforeach
         </tbody>

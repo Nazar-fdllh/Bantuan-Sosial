@@ -14,6 +14,7 @@ class PenerimaController extends Controller
             'nik' => 'required|string|max:20',
             'alamat' => 'required|string',
             'no_hp' => 'nullable|string|max:15',
+            'deskripsi' => 'nullable|string|max:500',
         ]);
 
         Penerima::create($request->all());

@@ -41,6 +41,11 @@ class PenerimaResource extends Resource
                 ->tel()
                 ->nullable()
                 ->maxLength(15),
+            Forms\Components\Textarea::make('deskripsi')
+                ->label('Deskripsi')
+                ->nullable()
+                ->maxLength(500),
+            
         ]);
     }
 
@@ -62,6 +67,10 @@ class PenerimaResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Tanggal Dibuat')
                     ->dateTime('d/m/Y'),
+                Tables\Columns\TextColumn::make('deskripsi')
+                    ->label('Deskripsi')
+                    ->limit(50), // Membatasi panjang teks yang ditampilkan
+
             ])
             ->filters([
                 Tables\Filters\Filter::make('recent')

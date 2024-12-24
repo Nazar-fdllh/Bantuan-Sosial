@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nik')->unique(); // Nomor Identitas Kependudukan
             $table->string('alamat'); // Alamat penerima
             $table->string('no_hp')->nullable(); // Nomor telepon
+            $table->text('deskripsi')->nullable();
             $table->timestamps(); // Created at & Updated at
         });
         
