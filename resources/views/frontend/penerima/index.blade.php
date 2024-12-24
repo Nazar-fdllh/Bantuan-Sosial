@@ -132,11 +132,11 @@
         <div class="content-box">
           <div class="img-box">
             <a href="{{ url('/program') }}">
-              <img src="{{ asset('assets/images/pkh.png') }}" alt="" class="img-fluid mb-3">
+              <img src="{{ asset('assets/images/Bantuan Santunan.jpg') }}" alt="" class="img-fluid mb-3">
             </a>
           </div>
           <div class="detail-box">
-            <h6>Program Keluarga Harapan</h6>
+            <h6>Program Santunan Keluargan</h6>
             <p>Program bantuan sosial bersyarat yang diberikan kepada keluarga miskin.</p>
           </div>
         </div>
@@ -147,7 +147,7 @@
         <div class="content-box">
           <div class="img-box" style="width: 100%; max-width: 600px; overflow: hidden;">
             <a href="{{ url('/program') }}">
-              <img src="{{ asset('assets/images/blt.jpg') }}" alt="" class="img-fluid mb-3"
+              <img src="{{ asset('assets/images/BLT.jpg') }}" alt="" class="img-fluid mb-3"
                 style="width: auto; height: auto;">
             </a>
           </div>

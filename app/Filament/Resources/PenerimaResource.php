@@ -14,7 +14,7 @@ class PenerimaResource extends Resource
 {
     protected static ?string $model = Penerima::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user';
+    protected static ?string $navigationIcon = 'heroicon-s-user';
 
     // Mengatasi pluralisasi otomatis
     protected static ?string $pluralModelLabel = 'Penerima';
