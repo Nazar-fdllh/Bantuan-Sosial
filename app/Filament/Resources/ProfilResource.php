@@ -21,6 +21,10 @@ class ProfilResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
+    protected static ?string $pluralModelLabel = 'Profil';
+    protected static ?string $navigationLabel = 'Profil';
+
+
     public static function form(Form $form): Form
     {
         return $form
@@ -73,7 +77,7 @@ class ProfilResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListProfils::route('/'),
+            'index' => Pages\ListProfil::route('/'),
             'create' => Pages\CreateProfil::route('/create'),
             'edit' => Pages\EditProfil::route('/{record}/edit'),
         ];
